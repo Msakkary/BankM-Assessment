@@ -9,6 +9,6 @@ import { env } from './.env';
 export const environment = {
   production: true,
   version: env['npm_package_version'],
-  serverUrl: '',
-  apiKey: '',
+  serverUrl: 'https://api.apilayer.com/fixer/',
+  apiKey: '5MB1UlMV4cdr9banKq0VxNKVUfUW7FqX',
 };
