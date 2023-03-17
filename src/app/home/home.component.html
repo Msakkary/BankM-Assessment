@@ -1,2 +1,2 @@
-<app-converter-panel></app-converter-panel>
-<app-currencies-grid></app-currencies-grid>
+<app-converter-panel (converted)="updatePanel($event)"></app-converter-panel>
+<app-currencies-grid [data]="convertQuery"></app-currencies-grid>

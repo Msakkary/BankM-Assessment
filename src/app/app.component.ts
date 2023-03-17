@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
 import { environment } from '@env/environment';
 import { UntilDestroy } from '@shared';
 
@@ -10,7 +9,7 @@ import { UntilDestroy } from '@shared';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, OnDestroy {
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit() {}
   ngOnDestroy() {}
