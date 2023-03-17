@@ -1,0 +1,23 @@
+{
+  "name": "BM",
+  "short_name": "BM",
+  "theme_color": "#488aff",
+  "background_color": "#488aff",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "assets/BM-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/BM-logo@192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}
