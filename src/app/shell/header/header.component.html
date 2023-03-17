@@ -1,0 +1,32 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand logo" href=""><img src="../../../assets/logo.png" class="img-fluid" alt="BM Exchanger"/></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          aria-controls="navbar-menu"
+          aria-label="Toggle navigation"
+          (click)="toggleMenu()"
+          [attr.aria-expanded]="!menuHidden"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          id="navbar-menu"
+          class="collapse navbar-collapse float-xs-none"
+          [ngbCollapse]="menuHidden"
+        >
+          <div class="navbar-nav me-auto mb-2 mb-lg-0"></div>
+          <div class="navbar-nav ml-auto">
+            <a class="nav-link" routerLink="/details" [queryParams]="{curr: 'Euro'}" (click)="detailsEU()">
+              EUR-USD Details</a>
+  
+            <a class="nav-link"  routerLink="/details" [queryParams]="{curr: 'Euro'}" (click)="detailsEG()">
+              EUR-GBP Details</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
