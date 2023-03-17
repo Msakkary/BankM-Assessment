@@ -1,0 +1,116 @@
+<div class="container">
+    <div class="conv-panel">
+      <div class="row align-items-center">
+        <div class="col-md-auto">
+          <h1 class="display-5" *ngIf="!isDetailsPage">Currancy Exchanger</h1>
+          <h1 class="display-5" *ngIf="isDetailsPage">
+            {{ baseCurr }} - {{ detailCurr }}
+          </h1>
+        </div>
+        <div class="col-md-auto ms-md-auto">
+          <button
+            type="button"
+            class="btn btn-lg btn-warning"
+            *ngIf="isDetailsPage"
+            [routerLink]="['/']"
+          >
+            Back to Home <span class="fa fa-home"></span>
+          </button>
+        </div>
+      </div>
+      <div class="converter mt-10">
+        <form [formGroup]="convertForm" class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="form-floating mb-3">
+              <input
+                type="number"
+                min="1"
+                class="form-control"
+                id="amount"
+                formControlName="amount"
+                placeholder="Please Add Amount"
+              />
+              <label for="amount">Please Add Amount</label>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="form-floating">
+              <select
+                class="form-select"
+                formControlName="from"
+                id="from"
+                aria-label="Please Select"
+                [attr.disabled]="detailCurr"
+              >
+              <option value="">Select Currency</option>
+                <option
+                  *ngFor="let curr of api.currenciesList"
+                  [value]="curr.symbol"
+                >
+                  {{ curr.symbol }} - {{ curr.name }}
+                </option>
+              </select>
+              <label for="from">From</label>
+            </div>
+          </div>
+          <div class="col-md-1 col-sm-12" *ngIf="!isDetailsPage">
+            <a class="btn btn-info" (click)="swapSelection()">
+              <i class="fa fa-light fa-rotate"></i>
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <div class="form-floating">
+              <select
+                class="form-select"
+                formControlName="to"
+                id="to"
+                aria-label="Please Select"
+              >
+              <option value="">Select Currency</option>
+                <option
+                  *ngFor="let curr of api.currenciesList"
+                  [value]="curr.symbol"
+                >
+                  {{ curr.symbol }} - {{ curr.name }}
+                </option>
+              </select>
+              <label for="to">To</label>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button
+              class="btn btn-primary"
+              type="button"
+              (click)="convert()"
+              [disabled]="convertForm.invalid"
+            >
+              Convert
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="row results">
+        <div class="col">
+          <div class="card text-center">
+            <div class="card-header">1 {{baseCurr}} = {{api.USDEURRate| number: '.0-3'}} {{targetedCurr}}</div>
+            <div class="card-body" *ngIf="result">
+              <h5 class="card-title">
+                {{ result | number : '.0-3' }} {{ targetedCurr }}
+              </h5>
+              <button
+                *ngIf="!isDetailsPage && result"
+                href="#"
+                class="btn btn-primary"
+                [disabled]="convertForm.invalid"
+                (click)="routeToDetail()"
+              >
+                More Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
