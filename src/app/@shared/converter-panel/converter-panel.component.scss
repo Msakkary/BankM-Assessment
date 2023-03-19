@@ -42,3 +42,27 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  h1 {
+    margin: 10px 0 20px;
+  }
+  h1,
+  h5,
+  p,
+  select,
+  input {
+    text-align: center;
+  }
+  .form-floating,
+  .swapBtn {
+    margin-bottom: 30px;
+  }
+
+  .conv-panel .col-md-auto {
+    text-align: center;
+    .btn{
+      margin-bottom: 20px;
+    }
+  }
+}

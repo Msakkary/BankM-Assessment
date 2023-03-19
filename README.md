@@ -15,9 +15,6 @@
 # Project structure
 
 ```
-dist/                        compiled version
-docs/                        project docs and coding guides
-e2e/                         end-to-end tests
 src/                         project source code
 |- app/                      app components
 |  |- @shared/               shared module (common services, components, directives and pipes)
@@ -28,7 +25,6 @@ src/                         project source code
 |- assets/                   app assets (images, fonts, sounds...)
 |- environments/             values for various build environments
 |- theme/                    app global scss variables and theme
-|- translations/             translations files
 |- index.html                html entry point
 |- main.scss                 global style entry point
 |- main.ts                   app entry point

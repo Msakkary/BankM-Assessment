@@ -107,7 +107,9 @@
             (click)="convert()"
             [disabled]="convertForm.invalid"
           >
-            Convert
+          <span *ngIf="!result">Convert</span> 
+          <span *ngIf="result">Update</span> 
+            
           </button>
         </div>
       </form>
