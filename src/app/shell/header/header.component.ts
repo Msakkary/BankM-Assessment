@@ -19,11 +19,11 @@ export class HeaderComponent implements OnInit {
     this.menuHidden = !this.menuHidden;
   }
 
-  detailsEU(){
+  detailsEU() {
     const queryEU: ConvertQuery = { amount: 1, from: 'EUR', to: 'USD' };
-    this.store.updateState(queryEU)
+    this.store.updateState(queryEU);
   }
-  detailsEG(){
+  detailsEG() {
     const queryEG: ConvertQuery = { amount: 1, from: 'EUR', to: 'GBP' };
     this.store.updateState(queryEG);
   }

@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../services/api.service';
 import { ConvertQuery } from '../interfaces/fixer.type';
 import { StoreService } from '../services/store.service';
-import { skip } from 'rxjs';
+import { debounce, interval, skip } from 'rxjs';
 
 @Component({
   selector: 'app-converter-panel',
@@ -76,6 +76,7 @@ export class ConverterPanelComponent implements OnInit {
         this.convertForm.value.to,
         this.convertForm.value.amount
       )
+      .pipe(debounce(() => interval(1500)))
       .subscribe((response) => {
         this.convertQuery = this.convertForm.value;
         this.rate = response.info.rate;

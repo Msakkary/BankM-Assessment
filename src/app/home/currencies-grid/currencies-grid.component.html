@@ -1,27 +1,26 @@
-<div class="container">
-    <div class="row">
-      <h1 class="display-6 text-center" *ngIf="resultRates">
-        A Comparision with most popular currancies
-      </h1>
-      <div class="w-100"></div>
-      <div
-        class="col-md-4 col-sm-12"
-        *ngFor="let popularRate of resultRates | keyvalue"
-      >
-        <div class="card text-center">
-          <div class="card-header">{{ popularRate.key }}</div>
-          <div class="card-body">
-            <h5 class="card-title">
-              {{ popularRate.value * amount | number : '.0-3' }}
-              {{ popularRate.key }}
-            </h5>
-            <p class="card-text">
-              {{ amount }} {{ base }} = {{ popularRate.value | number : '.0-3' }}
-              {{ popularRate.key }}
-            </p>
-          </div>
+<div class="container CurGrid">
+  <div class="row">
+    <h1 class="display-6 text-center" *ngIf="resultRates">
+      A Comparision with most popular currancies
+    </h1>
+    <div class="w-100"></div>
+    <div
+      class="col-md-4 col-sm-12"
+      *ngFor="let popularRate of resultRates | keyvalue"
+    >
+      <div class="card text-center">
+        <div class="card-header">From {{ base }} To {{ popularRate.key }}</div>
+        <div class="card-body">
+          <h4 class="card-title">
+            {{ popularRate.value * amount | number : '.0-3' }}
+            {{ popularRate.key }}
+          </h4>
+          <p class="card-text">
+            {{ amount }} {{ base }} = {{ popularRate.value | number : '.0-3' }}
+            {{ popularRate.key }}
+          </p>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

@@ -1,0 +1,21 @@
+.CurGrid {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background: linear-gradient(
+    0deg,
+    rgba(105, 2, 63, 0.7777704831932774) 0%,
+    rgba(146, 21, 97, 1) 100%
+  );
+  border-radius: 20px;
+  h1 {
+    color: white;
+    margin-top: 20px;
+    text-transform: capitalize;
+  }
+  .card {
+    margin: 10px;
+    .card-title {
+      color: rgb(105, 2, 63);
+    }
+  }
+}

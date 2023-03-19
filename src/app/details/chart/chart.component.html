@@ -1,16 +1,17 @@
-<div class="container">
-    <div class="row">
-      <h1 class="display-5">historical chart for {{baseCurr}} over the past year</h1>
-      <div class="col">
-        <canvas
-          baseChart
-          [datasets]="ChartData"
-          [labels]="ChartLabels"
-          [options]="ChartOptions"
-          [type]="'line'"
-        >
-        </canvas>
-      </div>
+<div class="container lineChart">
+  <div class="row">
+    <h1 class="display-5">
+      historical chart for {{ baseCurr }} over the past year
+    </h1>
+    <div class="col">
+      <canvas
+        baseChart
+        [datasets]="ChartData"
+        [labels]="ChartLabels"
+        [options]="ChartOptions"
+        [type]="'line'"
+      >
+      </canvas>
     </div>
   </div>
-  
+</div>

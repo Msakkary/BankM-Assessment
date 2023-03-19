@@ -16,9 +16,9 @@ export class ChartComponent implements OnInit {
   ChartLabels: string[] = [];
   ChartOptions: ChartOptions = {
     responsive: true,
-    color: 'rgb(75, 192, 192)',
-    backgroundColor: 'gray',
-    borderColor: 'rgb(175, 192, 192)'
+    color: 'rgb(105, 2, 63)',
+    backgroundColor: 'black',
+    borderColor: 'rgb(105, 2, 63)',
   };
 
   baseCurr!: string;
@@ -27,14 +27,14 @@ export class ChartComponent implements OnInit {
 
   // Get Data from the store and initiate chart prepare process
   ngOnInit() {
-    this.fetchRequiredData()
+    this.fetchRequiredData();
   }
 
-  fetchRequiredData(){
+  fetchRequiredData() {
     this.store.exchangeState$.pipe(skip(1)).subscribe((response) => {
       this.convertedData = response;
       this.prepareChartData(this.convertedData);
-      this.baseCurr = response.from
+      this.baseCurr = response.from;
     });
   }
 

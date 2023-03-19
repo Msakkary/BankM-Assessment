@@ -38,11 +38,15 @@ export class ApiService {
         name: response.symbols[s],
       }));
     });
-    this.initiateStickyPanel()
+    this.initiateStickyPanel();
   }
 
-  public initiateStickyPanel(){
-    this.convert$(this.store.getState().from, this.store.getState().to, this.store.getState().amount).subscribe((response) => {
+  public initiateStickyPanel() {
+    this.convert$(
+      this.store.getState().from,
+      this.store.getState().to,
+      this.store.getState().amount
+    ).subscribe((response) => {
       this.USDEURRate = 1 * response.info.rate;
     });
   }

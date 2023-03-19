@@ -1,5 +1,44 @@
-
-.results {
-    margin-top: 20px;
+.conv-panel {
+  .container {
+    background: rgb(105, 2, 63);
+    background: linear-gradient(
+      0deg,
+      rgba(105, 2, 63, 0.7777704831932774) 0%,
+      rgba(146, 21, 97, 1) 100%
+    );
+    padding: 10px 25px 30px 25px;
+    border-radius: 20px;
   }
-  
+  h1 {
+    color: white;
+  }
+
+  .swapBtn {
+    .btn {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+
+  .stickyPanel {
+    text-decoration: none;
+    color: #000;
+    background: #ffc;
+    display: block;
+    padding: 10px;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+    p {
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+
+  .results {
+    margin-top: 10px;
+    h5 {
+      font-size: 40px;
+      font-weight: 400;
+      color: rgb(105, 2, 63);
+    }
+  }
+}
