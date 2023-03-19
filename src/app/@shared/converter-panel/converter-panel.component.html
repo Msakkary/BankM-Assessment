@@ -82,10 +82,11 @@
         </div>
         <div class="w-100"></div>
         <div class="d-grid col-4 mx-auto stickyPanel">
-          <p>
+          <p *ngIf="!result">
             1 {{ baseCurr }} = {{ api.USDEURRate | number : '.0-3' }}
             {{ targetedCurr }}
           </p>
+          <p *ngIf="result">1 {{ baseCurr }} = {{ rate }} {{ targetedCurr }}</p>
         </div>
         <div
           class="d-grid gap-2 col-4 mx-auto"
@@ -107,9 +108,8 @@
             (click)="convert()"
             [disabled]="convertForm.invalid"
           >
-          <span *ngIf="!result">Convert</span> 
-          <span *ngIf="result">Update</span> 
-            
+            <span *ngIf="!result">Convert</span>
+            <span *ngIf="result">Update</span>
           </button>
         </div>
       </form>

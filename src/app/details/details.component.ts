@@ -26,7 +26,6 @@ export class DetailsComponent implements OnInit {
     // will be used for the charts
     this.store.exchangeState$.subscribe((response) => {
       this.convertedData = response;
-      console.log(this.convertedData);
     });
   }
 }
