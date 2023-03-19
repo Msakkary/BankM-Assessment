@@ -80,13 +80,13 @@
             <label for="to">To</label>
           </div>
         </div>
-        <div class="w-100"></div>
-        <div class="d-grid col-4 mx-auto stickyPanel">
-          <p *ngIf="!result">
+        
+        <div class="d-grid col-4 mx-auto">
+          <p class="stickyPanel" *ngIf="!result">
             1 {{ baseCurr }} = {{ api.USDEURRate | number : '.0-3' }}
             {{ targetedCurr }}
           </p>
-          <p *ngIf="result">1 {{ baseCurr }} = {{ rate }} {{ targetedCurr }}</p>
+          <p class="stickyPanel"  *ngIf="result">1 {{ baseCurr }} = {{ rate }} {{ targetedCurr }}</p>
         </div>
         <div
           class="d-grid gap-2 col-4 mx-auto"
@@ -101,7 +101,7 @@
             More Details
           </button>
         </div>
-        <div class="d-grid gap-2 col-4 mx-auto">
+        <div class="d-grid  col-4 mx-auto">
           <button
             class="btn btn-warning"
             type="button"
