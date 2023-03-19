@@ -13,7 +13,7 @@ import { env } from './.env';
 export const environment = {
   production: false,
   serverUrl: 'https://api.apilayer.com/fixer/',
-  apiKey: '5MB1UlMV4cdr9banKq0VxNKVUfUW7FqX',
+  apiKey: 'Dpma1c4vi7EQkVBc0ZLObWf9wIHpK5lm',
 };
 
 /*

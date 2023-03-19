@@ -1,18 +1,4 @@
-# ngX Starter Kit
-
-Web project starter kit including modern tools and workflow based on
-[angular-cli](https://github.com/angular/angular-cli), best practices from the community, a scalable base template and
-a good learning base.
-
-Generated using [BM](https://github.com/BM/generator-BM).
-
-### Benefits
-
-- Quickstart a project in seconds and focus on features, not on frameworks or tools
-
-- Industrial-grade tools, ready for usage in a continuous integration environment and DevOps
-
-- Scalable architecture with base app template including example components, services and tests
+# BM Assessment - Currancy Exchanger
 
 # Getting started
 
@@ -79,7 +65,6 @@ any of the source files.
 You should not use `ng serve` directly, as it does not use the backend proxy configuration by default.
 
 ## Code scaffolding
-
 Run `npm run generate -- component <name>` to generate a new component. You can also use
 `npm run generate -- directive|pipe|service|class|module`.
 
@@ -120,8 +105,6 @@ Development, build and quality processes are based on [angular-cli](https://gith
 - [Font Awesome](http://fontawesome.io)
 - [RxJS](http://reactivex.io/rxjs)
 - [ng-bootstrap](https://ng-bootstrap.github.io)
-- [ngx-translate](https://github.com/ngx-translate/core)
-- [Lodash](https://lodash.com)
 
 #### Coding guides
 
@@ -131,15 +114,3 @@ Development, build and quality processes are based on [angular-cli](https://gith
 - [HTML](docs/coding-guides/html.md)
 - [Unit tests](docs/coding-guides/unit-tests.md)
 - [End-to-end tests](docs/coding-guides/e2e-tests.md)
-
-#### Other documentation
-
-- [I18n guide](docs/i18n.md)
-- [Working behind a corporate proxy](docs/corporate-proxy.md)
-- [Updating dependencies and tools](docs/updating.md)
-- [Using a backend proxy for development](docs/backend-proxy.md)
-- [Browser routing](docs/routing.md)
-
-# License
-
-[MIT](https://github.com/BM/generator-BM/blob/main/LICENSE)

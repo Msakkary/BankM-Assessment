@@ -10,5 +10,5 @@ export const environment = {
   production: true,
   version: env['npm_package_version'],
   serverUrl: 'https://api.apilayer.com/fixer/',
-  apiKey: '5MB1UlMV4cdr9banKq0VxNKVUfUW7FqX',
+  apiKey: '0oIlr9Z6y0yxSo2OT185OhBZiIKirnya',
 };
